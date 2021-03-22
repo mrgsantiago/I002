@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0EDD30C0-108C-458E-A721-ECA36215FF8E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>I002</RootNamespace>
+    <AssemblyName>I002</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CS\CheckSimbol.cs" />
+    <Compile Include="I002DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>I002DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\CompositionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase\CompositionForm.Designer.cs">
+      <DependentUpon>CompositionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CS\EntityReport.cs" />
+    <Compile Include="Storage\FormDialogProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Storage\FormDialogProduct.Designer.cs">
+      <DependentUpon>FormDialogProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Storage\FormDialogCounteragent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Storage\FormDialogCounteragent.Designer.cs">
+      <DependentUpon>FormDialogCounteragent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Storage\SellProductDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Storage\SellProductDialog.Designer.cs">
+      <DependentUpon>SellProductDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\FormPurchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase\FormPurchase.Designer.cs">
+      <DependentUpon>FormPurchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Storage\BuyProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Storage\BuyProduct.Designer.cs">
+      <DependentUpon>BuyProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CS\EntityProductOnStorage.cs" />
+    <Compile Include="Agents\ChangeAndAddCounteragent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agents\ChangeAndAddCounteragent.Designer.cs">
+      <DependentUpon>ChangeAndAddCounteragent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CS\EntityCounteragent.cs" />
+    <Compile Include="Agents\Counteragent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agents\Counteragent.Designer.cs">
+      <DependentUpon>Counteragent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products\ChangeProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Products\ChangeProduct.Designer.cs">
+      <DependentUpon>ChangeProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Products\FormAddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Products\FormAddProduct.Designer.cs">
+      <DependentUpon>FormAddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CS\EntityProduct.cs" />
+    <Compile Include="Products\Products.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Products\Products.Designer.cs">
+      <DependentUpon>Products.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Storage\ProductOnStorage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Storage\ProductOnStorage.Designer.cs">
+      <DependentUpon>ProductOnStorage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CS\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Storage\SellProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Storage\SellProductForm.Designer.cs">
+      <DependentUpon>SellProductForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Agents\ChangeAndAddCounteragent.resx">
+      <DependentUpon>ChangeAndAddCounteragent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Agents\Counteragent.resx">
+      <DependentUpon>Counteragent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Storage\FormDialogProduct.resx">
+      <DependentUpon>FormDialogProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Storage\FormDialogCounteragent.resx">
+      <DependentUpon>FormDialogCounteragent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Storage\SellProductDialog.resx">
+      <DependentUpon>SellProductDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\CompositionForm.resx">
+      <DependentUpon>CompositionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\FormPurchase.resx">
+      <DependentUpon>FormPurchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Storage\BuyProduct.resx">
+      <DependentUpon>BuyProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Storage\ProductOnStorage.resx">
+      <DependentUpon>ProductOnStorage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products\ChangeProduct.resx">
+      <DependentUpon>ChangeProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products\FormAddProduct.resx">
+      <DependentUpon>FormAddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Products\Products.resx">
+      <DependentUpon>Products.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Storage\SellProductForm.resx">
+      <DependentUpon>SellProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="I002DataSet.xsc">
+      <DependentUpon>I002DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="I002DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>I002DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="I002DataSet.xss">
+      <DependentUpon>I002DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
